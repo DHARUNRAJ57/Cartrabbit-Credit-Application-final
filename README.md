@@ -42,6 +42,7 @@ You should see mirco4 listed among the databases.
 Run the database migrations (**Set the database connection in .env before migrating**)
 
     php artisan migrate
+    php artisan key:generate
 
 Start the local development server
 
