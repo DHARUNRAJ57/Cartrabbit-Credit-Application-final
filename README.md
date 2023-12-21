@@ -18,7 +18,9 @@ Install all the dependencies using composer
 Copy the example env file and make the required configuration changes in the .env file
 
     cp .env.example .env
-    Start XAMPP:
+
+    
+Start XAMPP:
 Open XAMPP Control Panel and start the Apache and MySQL services.
 
 Access phpMyAdmin:
@@ -29,15 +31,15 @@ Once in phpMyAdmin:
 
 Click on the "Databases" tab.
 
-In the "Create database" field, enter mirco4.
+In the "Create database" field, enter cartrabbitcreditapplication.
 
 Choose the collation if needed (default is usually fine).
 
-Click on the "Create" button to create the mirco4 database.
+Click on the "Create" button to create the cartrabbitcreditapplication database.
 
 Verification:
 After creating the database, you can verify its creation by checking the list of databases in phpMyAdmin.
-You should see mirco4 listed among the databases.
+You should see cartrabbitcreditapplication listed among the databases.
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
