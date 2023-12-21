@@ -1,220 +1,169 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ![Laravel Example App](logo.png)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Build Status](https://img.shields.io/travis/gothinkster/laravel-realworld-example-app/master.svg)](https://travis-ci.org/gothinkster/laravel-realworld-example-app) [![Gitter](https://img.shields.io/gitter/room/realworld-dev/laravel.svg)](https://gitter.im/realworld-dev/laravel) [![GitHub stars](https://img.shields.io/github/stars/gothinkster/laravel-realworld-example-app.svg)](https://github.com/gothinkster/laravel-realworld-example-app/stargazers) [![GitHub license](https://img.shields.io/github/license/gothinkster/laravel-realworld-example-app.svg)](https://raw.githubusercontent.com/gothinkster/laravel-realworld-example-app/master/LICENSE)
 
-## About Laravel
+> ### Example Laravel codebase containing real world examples (CRUD, auth, advanced patterns and more) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This repo is functionality complete — PRs and issues welcome!
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+----------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Getting started
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Please check the official laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Alternative installation is possible without local dependencies relying on [Docker](#docker). 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Clone the repository
 
-## Laravel Sponsors
+    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Switch to the repo folder
 
-### Premium Partners
+    cd laravel-realworld-example-app
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Install all the dependencies using composer
 
----
+    composer install
 
-## Cartrabbit Credit Application
+Copy the example env file and make the required configuration changes in the .env file
 
-A brief description of your Cartrabbit Credit Application goes here. Include an overview of what the application does and its main features.
+    cp .env.example .env
 
-### Table of Contents
-- [Project Overview](#project-overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+Generate a new application key
 
-### Project Overview
+    php artisan key:generate
 
-Provide a more detailed description of the Cartrabbit Credit Application. Explain its objectives, target users, and how it fulfills a specific need or problem. Include any relevant context to help readers understand the significance of the application.
+Generate a new JWT authentication secret key
 
-### Installation
+    php artisan jwt:generate
 
-#### Prerequisites
+Run the database migrations (**Set the database connection in .env before migrating**)
 
-List any prerequisites or requirements needed to run the application, such as:
+    php artisan migrate
 
-- PHP (version)
-- Composer
-- Database (MySQL, PostgreSQL, etc.)
-- Other dependencies
+Start the local development server
 
-#### Steps to Install
+    php artisan serve
 
-1. Clone the repository:
+You can now access the server at http://localhost:8000
 
-   ```bash
-   git clone https://github.com/DHARUNRAJ57/Cartrabbit-Credit-Application-final.git
+**TL;DR command list**
 
-Absolutely! Below is the updated content with your Cartrabbit Credit Application information added after the provided code:
+    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
+    cd laravel-realworld-example-app
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+    php artisan jwt:generate 
+    
+**Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
 
-markdown
-Copy code
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+    php artisan migrate
+    php artisan serve
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Database seeding
 
-## About Laravel
+**Populate the database with seed data with relationships which includes users, articles, comments, tags, favorites and follows. This can help you to quickly start testing the api or couple a frontend and start using it with ready content.**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Open the DummyDataSeeder and set the property values as per your requirement
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    database/seeds/DummyDataSeeder.php
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Run the database seeder and you're done
 
-## Learning Laravel
+    php artisan db:seed
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    php artisan migrate:refresh
+    
+## Docker
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+To install with [Docker](https://www.docker.com), run following commands:
 
-## Laravel Sponsors
+```
+git clone git@github.com:gothinkster/laravel-realworld-example-app.git
+cd laravel-realworld-example-app
+cp .env.example.docker .env
+docker run -v $(pwd):/app composer install
+cd ./docker
+docker-compose up -d
+docker-compose exec php php artisan key:generate
+docker-compose exec php php artisan jwt:generate
+docker-compose exec php php artisan migrate
+docker-compose exec php php artisan db:seed
+docker-compose exec php php artisan serve --host=0.0.0.0
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The api can be accessed at [http://localhost:8000/api](http://localhost:8000/api).
 
-### Premium Partners
+## API Specification
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+This application adheres to the api specifications set by the [Thinkster](https://github.com/gothinkster) team. This helps mix and match any backend with any other frontend without conflicts.
 
----
+> [Full API Spec](https://github.com/gothinkster/realworld/tree/master/api)
 
-## Cartrabbit Credit Application
+More information regarding the project can be found here https://github.com/gothinkster/realworld
 
-A brief description of your Cartrabbit Credit Application goes here. Include an overview of what the application does and its main features.
+----------
 
-### Table of Contents
-- [Project Overview](#project-overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+# Code overview
 
-### Project Overview
+## Dependencies
 
-Provide a more detailed description of the Cartrabbit Credit Application. Explain its objectives, target users, and how it fulfills a specific need or problem. Include any relevant context to help readers understand the significance of the application.
+- [jwt-auth](https://github.com/tymondesigns/jwt-auth) - For authentication using JSON Web Tokens
+- [laravel-cors](https://github.com/barryvdh/laravel-cors) - For handling Cross-Origin Resource Sharing (CORS)
 
-### Installation
+## Folders
 
-#### Prerequisites
+- `app` - Contains all the Eloquent models
+- `app/Http/Controllers/Api` - Contains all the api controllers
+- `app/Http/Middleware` - Contains the JWT auth middleware
+- `app/Http/Requests/Api` - Contains all the api form requests
+- `app/RealWorld/Favorite` - Contains the files implementing the favorite feature
+- `app/RealWorld/Filters` - Contains the query filters used for filtering api requests
+- `app/RealWorld/Follow` - Contains the files implementing the follow feature
+- `app/RealWorld/Paginate` - Contains the pagination class used to paginate the result
+- `app/RealWorld/Slug` - Contains the files implementing slugs to articles
+- `app/RealWorld/Transformers` - Contains all the data transformers
+- `config` - Contains all the application configuration files
+- `database/factories` - Contains the model factory for all the models
+- `database/migrations` - Contains all the database migrations
+- `database/seeds` - Contains the database seeder
+- `routes` - Contains all the api routes defined in api.php file
+- `tests` - Contains all the application tests
+- `tests/Feature/Api` - Contains all the api tests
 
-List any prerequisites or requirements needed to run the application, such as:
+## Environment variables
 
-- PHP (version)
-- Composer
-- Database (MySQL, PostgreSQL, etc.)
-- Other dependencies
+- `.env` - Environment variables can be set in this file
 
-#### Steps to Install
+***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
 
-1. Clone the repository:
+----------
 
-   ```bash
-   git clone https://github.com/DHARUNRAJ57/Cartrabbit-Credit-Application-final.git
-Navigate to the project directory:
+# Testing API
 
-bash
-Copy code
-cd Cartrabbit-Credit-Application-final
-Install dependencies:
+Run the laravel development server
 
-bash
-Copy code
-composer install
-Configuration:
+    php artisan serve
 
-Copy .env.example to .env and set up your environment variables (database, app key, etc.).
-Database setup:
+The api can now be accessed at
 
-bash
-Copy code
-php artisan migrate
-Usage
-Explain how to use the Cartrabbit Credit Application once it's installed. Provide examples or commands for common tasks, and describe any configurations or settings that users might need to modify.
+    http://localhost:8000/api
 
-Features
-List and describe the main features or functionalities of the Cartrabbit Credit Application. Include details about what each feature does and its significance.
+Request headers
 
-Technologies Used
-Laravel (version)
-List other major frameworks or libraries used
-Database: (MySQL, PostgreSQL, etc.)
-Frontend: (if applicable, mention technologies like Vue.js, React, etc.)
-Other tools or technologies
-Contributing
-Explain how others can contribute to the project. Provide guidelines for submitting bug reports, feature requests, or pull requests. Include information on coding standards, testing, and other relevant details.
+| **Required** 	| **Key**              	| **Value**            	|
+|----------	|------------------	|------------------	|
+| Yes      	| Content-Type     	| application/json 	|
+| Yes      	| X-Requested-With 	| XMLHttpRequest   	|
+| Optional 	| Authorization    	| Token {JWT}      	|
 
-License
-Specify the project's license (e.g., MIT, Apache 2.0) and provide a brief description of what users can and cannot do with the project.
+Refer the [api specification](#api-specification) for more info.
 
-Acknowledgements
-Give credit to individuals, projects, or resources that have inspired or helped your Cartrabbit Credit Application. This could include libraries, tutorials, contributors, etc.
-This Markdown format includes the "Cartrabbit Credit Application" content beneath the provided Laravel content, maintaining the structure and styling for a README file on GitHub. Adjust or add any specific information necessary for your Cartrabbit Credit Application project.
+----------
+ 
