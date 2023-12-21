@@ -28,21 +28,16 @@ Create the Database:
 Once in phpMyAdmin:
 
 Click on the "Databases" tab.
+
 In the "Create database" field, enter mirc04.
+
 Choose the collation if needed (default is usually fine).
+
 Click on the "Create" button to create the mirc04 database.
+
 Verification:
-After creating the database, you can verify its creation by checking the list of databases in phpMyAdmin. You should see mirc04 listed among the databases.
-
-To guide users through these steps in a README file, you can include instructions similar to the following Markdown:
-
-Generate a new application key
-
-    php artisan key:generate
-
-Generate a new JWT authentication secret key
-
-    php artisan jwt:generate
+After creating the database, you can verify its creation by checking the list of databases in phpMyAdmin.
+You should see mirc04 listed among the databases.
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
